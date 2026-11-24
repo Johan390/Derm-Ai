@@ -1,0 +1,113 @@
+{
+  "dataset_provenance": "GENUINE_HAM10000_BENCHMARK",
+  "dataset_preparation_status": "READY_FOR_MODEL_TRAINING",
+  "total_records": 10015,
+  "classes_count": 7,
+  "integrity_check": {
+    "integrity_passed": true,
+    "issues_found": [],
+    "image_files_on_disk": 10015,
+    "missing_images_count": 0
+  },
+  "class_summary": [
+    {
+      "code": "nv",
+      "name": "Melanocytic Nevus",
+      "count": 6705,
+      "percentage": 66.95,
+      "risk_level": "Low Risk",
+      "imbalance_ratio_to_majority": 1.0
+    },
+    {
+      "code": "mel",
+      "name": "Melanoma",
+      "count": 1113,
+      "percentage": 11.11,
+      "risk_level": "High Risk",
+      "imbalance_ratio_to_majority": 6.02
+    },
+    {
+      "code": "bkl",
+      "name": "Benign Keratosis",
+      "count": 1099,
+      "percentage": 10.97,
+      "risk_level": "Low Risk",
+      "imbalance_ratio_to_majority": 6.1
+    },
+    {
+      "code": "bcc",
+      "name": "Basal Cell Carcinoma",
+      "count": 514,
+      "percentage": 5.13,
+      "risk_level": "High Risk",
+      "imbalance_ratio_to_majority": 13.04
+    },
+    {
+      "code": "akiec",
+      "name": "Actinic Keratosis",
+      "count": 327,
+      "percentage": 3.27,
+      "risk_level": "Moderate Risk",
+      "imbalance_ratio_to_majority": 20.5
+    },
+    {
+      "code": "vasc",
+      "name": "Vascular Lesion",
+      "count": 142,
+      "percentage": 1.42,
+      "risk_level": "Low Risk",
+      "imbalance_ratio_to_majority": 47.22
+    },
+    {
+      "code": "df",
+      "name": "Dermatofibroma",
+      "count": 115,
+      "percentage": 1.15,
+      "risk_level": "Low Risk",
+      "imbalance_ratio_to_majority": 58.3
+    }
+  ],
+  "age_statistics": {
+    "mean": 51.9,
+    "median": 50.0,
+    "min": 0,
+    "max": 85,
+    "std": 17.0
+  },
+  "sex_distribution": {
+    "male": 5406,
+    "female": 4552,
+    "unknown": 57
+  },
+  "localization_distribution": {
+    "back": 2192,
+    "lower extremity": 2077,
+    "trunk": 1404,
+    "upper extremity": 1118,
+    "abdomen": 1022,
+    "face": 745,
+    "chest": 407,
+    "foot": 319,
+    "unknown": 234,
+    "neck": 168,
+    "scalp": 128,
+    "hand": 90,
+    "ear": 56,
+    "genital": 48,
+    "acral": 7
+  },
+  "high_risk_summary": {
+    "high_risk_count": 1627,
+    "percentage": 16.25,
+    "diseases": [
+      "Melanoma (mel)",
+      "Basal Cell Carcinoma (bcc)"
+    ]
+  },
+  "recommendations": [
+    "Severe class imbalance observed: Majority class (nv) is ~60x larger than minority (df).",
+    "Employ Weighted Cross-Entropy or Focal Loss during model training in Milestone 2.",
+    "Use heavy stratified data augmentation on minority classes (DF, VASC, AKIEC).",
+    "Perform Stratified K-Fold or train/val/test splits grouped by lesion_id to prevent patient leakage."
+  ]
+}

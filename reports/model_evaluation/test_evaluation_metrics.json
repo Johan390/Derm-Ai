@@ -1,0 +1,118 @@
+{
+  "evaluation_timestamp": "2026-11-04T05:23:03Z",
+  "test_dataset_size": 1501,
+  "overall_accuracy": 0.7022,
+  "balanced_accuracy": 0.6085,
+  "macro_precision": 0.4783,
+  "macro_recall": 0.6085,
+  "macro_f1": 0.4989,
+  "weighted_f1": 0.7213,
+  "macro_roc_auc": 0.9053,
+  "weighted_roc_auc": 0.8942,
+  "per_class": {
+    "akiec": {
+      "name": "Actinic Keratosis",
+      "risk_level": "Moderate Risk",
+      "support": 48,
+      "precision": 0.212,
+      "recall": 0.8125,
+      "f1_score": 0.3362,
+      "roc_auc": 0.9399
+    },
+    "bcc": {
+      "name": "Basal Cell Carcinoma",
+      "risk_level": "High Risk",
+      "support": 76,
+      "precision": 0.5672,
+      "recall": 0.5,
+      "f1_score": 0.5315,
+      "roc_auc": 0.949
+    },
+    "bkl": {
+      "name": "Benign Keratosis",
+      "risk_level": "Low Risk",
+      "support": 164,
+      "precision": 0.5118,
+      "recall": 0.3963,
+      "f1_score": 0.4467,
+      "roc_auc": 0.8292
+    },
+    "df": {
+      "name": "Dermatofibroma",
+      "risk_level": "Low Risk",
+      "support": 18,
+      "precision": 0.2128,
+      "recall": 0.5556,
+      "f1_score": 0.3077,
+      "roc_auc": 0.9117
+    },
+    "mel": {
+      "name": "Melanoma",
+      "risk_level": "High Risk",
+      "support": 168,
+      "precision": 0.4478,
+      "recall": 0.3571,
+      "f1_score": 0.3974,
+      "roc_auc": 0.8127
+    },
+    "nv": {
+      "name": "Melanocytic Nevus",
+      "risk_level": "Low Risk",
+      "support": 1005,
+      "precision": 0.9105,
+      "recall": 0.8199,
+      "f1_score": 0.8628,
+      "roc_auc": 0.9099
+    },
+    "vasc": {
+      "name": "Vascular Lesion",
+      "risk_level": "Low Risk",
+      "support": 22,
+      "precision": 0.4865,
+      "recall": 0.8182,
+      "f1_score": 0.6102,
+      "roc_auc": 0.9849
+    }
+  },
+  "error_analysis": {
+    "total_errors": 447,
+    "error_rate": 0.2978,
+    "high_confidence_errors": 78,
+    "melanoma_false_negatives": 108,
+    "melanoma_sensitivity": 0.3571,
+    "bcc_false_negatives": 38,
+    "bcc_sensitivity": 0.5,
+    "top_confusion_pairs": [
+      {
+        "true_class": "nv",
+        "predicted_class": "mel",
+        "count": 57,
+        "percentage_of_true": 5.67
+      },
+      {
+        "true_class": "mel",
+        "predicted_class": "nv",
+        "count": 47,
+        "percentage_of_true": 27.98
+      },
+      {
+        "true_class": "bkl",
+        "predicted_class": "akiec",
+        "count": 46,
+        "percentage_of_true": 28.05
+      },
+      {
+        "true_class": "nv",
+        "predicted_class": "bkl",
+        "count": 42,
+        "percentage_of_true": 4.18
+      },
+      {
+        "true_class": "mel",
+        "predicted_class": "akiec",
+        "count": 38,
+        "percentage_of_true": 22.62
+      }
+    ]
+  }
+}

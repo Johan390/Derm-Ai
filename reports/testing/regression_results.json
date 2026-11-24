@@ -1,0 +1,149 @@
+{
+  "timestamp": "2026-11-24T04:55:45.293493+00:00",
+  "total_tests": 28,
+  "passed": 28,
+  "failed": 0,
+  "all_passed": true,
+  "results": [
+    {
+      "name": "Checkpoint mobilenetv2_skin_lesion_best.keras",
+      "passed": true,
+      "detail": "MD5 match: True | SHA-256 match: True"
+    },
+    {
+      "name": "Checkpoint phase1_best_model.keras",
+      "passed": true,
+      "detail": "MD5 match: True | SHA-256 match: True"
+    },
+    {
+      "name": "Checkpoint efficientnetb0_skin_lesion.keras",
+      "passed": true,
+      "detail": "MD5 match: True | SHA-256 match: True"
+    },
+    {
+      "name": "Checkpoint vit_skin_lesion_exp2_best.keras",
+      "passed": true,
+      "detail": "MD5 match: True | SHA-256 match: True"
+    },
+    {
+      "name": "Container dermai_backend",
+      "passed": true,
+      "detail": "State: running"
+    },
+    {
+      "name": "Container dermai_frontend",
+      "passed": true,
+      "detail": "State: running"
+    },
+    {
+      "name": "Container dermai_postgres",
+      "passed": true,
+      "detail": "State: running"
+    },
+    {
+      "name": "Health endpoint",
+      "passed": true,
+      "detail": "Status: 200"
+    },
+    {
+      "name": "ML service online",
+      "passed": true,
+      "detail": "Status: online"
+    },
+    {
+      "name": "Model artifact: mobilenetv2",
+      "passed": true,
+      "detail": "Status: available"
+    },
+    {
+      "name": "Model artifact: efficientnetb0",
+      "passed": true,
+      "detail": "Status: available"
+    },
+    {
+      "name": "Model artifact: vision_transformer",
+      "passed": true,
+      "detail": "Status: available"
+    },
+    {
+      "name": "Model artifact: soft_voting_ensemble",
+      "passed": true,
+      "detail": "Status: available"
+    },
+    {
+      "name": "Authentication (login)",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Auth /me endpoint",
+      "passed": true,
+      "detail": "Role: clinician"
+    },
+    {
+      "name": "Case list endpoint",
+      "passed": true,
+      "detail": "Found 11 cases"
+    },
+    {
+      "name": "Prediction (mobilenet)",
+      "passed": true,
+      "detail": "class=vasc, conf=0.7676, model=DermAI_MobileNetV2"
+    },
+    {
+      "name": "Prediction (efficientnet)",
+      "passed": true,
+      "detail": "class=vasc, conf=0.3900, model=DermAI_EfficientNetB0"
+    },
+    {
+      "name": "Prediction (vit)",
+      "passed": true,
+      "detail": "class=nv, conf=0.6387, model=DermAI_VisionTransformer"
+    },
+    {
+      "name": "Prediction (ensemble)",
+      "passed": true,
+      "detail": "class=vasc, conf=0.5788, model=DermAI_SoftVoting_Ensemble_MobileNetV2_EfficientNetB0"
+    },
+    {
+      "name": "Explainability (gradcam)",
+      "passed": true,
+      "detail": "Response size: 6907 bytes"
+    },
+    {
+      "name": "Explainability (gradcam-plus-plus)",
+      "passed": true,
+      "detail": "Response size: 8032 bytes"
+    },
+    {
+      "name": "Explainability (saliency)",
+      "passed": true,
+      "detail": "Response size: 11370 bytes"
+    },
+    {
+      "name": "ViT Attention Rollout (overlay)",
+      "passed": true,
+      "detail": "Status: 200, size: 4705 bytes, dimensions: (224, 224), mode: RGB"
+    },
+    {
+      "name": "ViT Attention Rollout (heatmap)",
+      "passed": true,
+      "detail": "Status: 200, size: 5508 bytes, dimensions: (224, 224), mode: RGB"
+    },
+    {
+      "name": "PostgreSQL connectivity",
+      "passed": true,
+      "detail": "/run/postgresql:5432 - accepting connections"
+    },
+    {
+      "name": "SQLite archive (dermai.db)",
+      "passed": true,
+      "detail": "Size: 1617920 bytes (expected 1617920)"
+    },
+    {
+      "name": "Frontend production build (Vite)",
+      "passed": true,
+      "detail": "Vite production build succeeded in ~450ms"
+    }
+  ]
+}

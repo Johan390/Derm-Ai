@@ -1,0 +1,205 @@
+# ==============================================================================
+# DermAI — Production-Grade Git Ignore Specification
+# ==============================================================================
+# Project: DermAI Clinical Skin Disease Screening Platform
+# Standards: HIPAA / GDPR Compliance, Secret Protection, Asset Management
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Environment Variables, Secrets & Sensitive Credentials
+# ------------------------------------------------------------------------------
+.env
+.env.*
+*.env
+*.env.*
+*.pem
+*.key
+*.cert
+*.crt
+*.pfx
+*.p12
+
+# Explicitly whitelist example and template configuration files
+!.env.example
+!.env.production.example
+!**/.env.example
+!**/.env.*.example
+
+# ------------------------------------------------------------------------------
+# 2. Database Files, Backups & Volume Data
+# ------------------------------------------------------------------------------
+*.db
+*.sqlite
+*.sqlite3
+*.db-wal
+*.db-shm
+*.db-journal
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite-journal
+postgres_data/
+docker_data/
+*.sql.gz
+*.dump
+
+# ------------------------------------------------------------------------------
+# 3. Medical Data & Patient Uploads (Protected Health Information - PHI)
+# ------------------------------------------------------------------------------
+# Strict HIPAA compliance: never commit patient dermoscopy photos
+backend/uploads/original/*
+backend/uploads/preview/*
+backend/uploads/preprocessed/*
+uploads/original/*
+uploads/preview/*
+uploads/preprocessed/*
+test_uploads*/
+
+# Preserve upload directory structure in Git via .gitkeep
+!backend/uploads/**/.gitkeep
+!**/uploads/**/.gitkeep
+
+# ------------------------------------------------------------------------------
+# 4. Large Research Datasets (HAM10000)
+# ------------------------------------------------------------------------------
+# Images (2.6+ GB) must be downloaded separately using download_instructions.md
+ml_dataset/HAM10000/images/
+ml_dataset/**/images/
+*.tar.gz
+*.zip
+
+# Preserve dataset metadata, annotations, and split manifests
+!ml_dataset/dataset_info.json
+!ml_dataset/eda_summary.json
+!ml_dataset/download_instructions.md
+!ml_dataset/HAM10000_DATASET_VERIFICATION.md
+!ml_dataset/sample_metadata.csv
+!ml_dataset/HAM10000/HAM10000_metadata.csv
+!ml_models/data_splits/*.csv
+
+# ------------------------------------------------------------------------------
+# 5. Machine Learning Checkpoints
+# ------------------------------------------------------------------------------
+# Generic large model weight files
+*.h5
+*.weights.h5
+*.pth
+*.pt
+*.onnx
+**/checkpoints/
+events.out.tfevents.*
+
+# Whitelist the 4 validated production checkpoints (<20MB each) and registries
+!ml_models/saved_models/*.keras
+!ml_models/saved_models/*.json
+
+# ------------------------------------------------------------------------------
+# 6. Python & Virtual Environments
+# ------------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+vit-env/
+
+# Pytest, Coverage & Type Check Caches
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# ------------------------------------------------------------------------------
+# 7. Frontend, Node.js & Web Bundles
+# ------------------------------------------------------------------------------
+node_modules/
+frontend/node_modules/
+.npm/
+frontend/dist/
+dist/
+.vite/
+frontend/.vite/
+.vite-temp/
+frontend/.vite-temp/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ------------------------------------------------------------------------------
+# 8. Operating System & IDE Artifacts
+# ------------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Thumbs.db:encryptable
+desktop.ini
+$RECYCLE.BIN/
+
+# IDE settings
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.bak
+*.code-workspace
+
+# ------------------------------------------------------------------------------
+# 9. Logs & Temporary Output
+# ------------------------------------------------------------------------------
+*.log
+logs/
+*.tmp
+*.temp
+temp/
+tmp/
+
+
+# Additional sensitive and generated files
+*.log.*
+*.bak
+*.backup
+*.old
+
+# Patient and clinical exports
+patient_exports/
+clinical_exports/
+medical_records/
+
+# Local environment files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Docker and generated artifacts
+docker-compose.override.yml
+*.tar
+*.tar.gz

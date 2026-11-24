@@ -1,0 +1,48 @@
+# Git
+.git
+.gitignore
+
+# Environment files and secrets
+.env
+.env.*
+**/.env
+**/.env.*
+
+# Python cache and virtual environments
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/.venv/
+**/venv/
+
+# Database files and backups
+**/*.db
+**/*.sqlite
+**/*.sqlite3
+
+# Patient uploads and generated test uploads
+backend/uploads/
+backend/test_uploads*/
+**/uploads/
+**/test_uploads*/
+
+# Test artifacts
+**/test_*.db
+**/test_*.py
+**/htmlcov/
+**/.coverage
+
+# Node.js dependencies and build output
+**/node_modules/
+**/dist/
+**/build/
+
+# Large research dataset
+ml_dataset/HAM10000/
+
+# Logs and temporary files
+**/*.log
+**/*.tmp
+**/.DS_Store

@@ -1,0 +1,202 @@
+{
+  "timestamp": "2026-11-24T15:30:54.220224+00:00",
+  "journeys": {
+    "journey_d_administrator": {
+      "steps": [
+        {
+          "step": "Admin Authentication (Provisioned Admin Login)",
+          "status": "PASS"
+        },
+        {
+          "step": "System Health Verification",
+          "status": "PASS"
+        },
+        {
+          "step": "Admin Pending Clinicians Queue Inspection",
+          "status": "PASS"
+        },
+        {
+          "step": "Model Registry Inspection (4 architectures)",
+          "status": "PASS"
+        },
+        {
+          "step": "Training Lineage & Hyperparameter Audit",
+          "status": "PASS"
+        },
+        {
+          "step": "Safe Model Activation & Rollback",
+          "status": "PASS"
+        }
+      ],
+      "passed": true
+    },
+    "journey_a_patient": {
+      "steps": [
+        {
+          "step": "Patient Registration & Token Issuance",
+          "status": "PASS"
+        },
+        {
+          "step": "Case Creation (CAS-202611-6408E5)",
+          "status": "PASS",
+          "case_id": 1
+        },
+        {
+          "step": "Real Dermatoscopy Image Upload & IQA Evaluation",
+          "status": "PASS",
+          "blur_score": 232.17,
+          "brightness_score": 202.18,
+          "contrast_score": 32.15
+        },
+        {
+          "step": "AI Prediction & Top-N Differential Ranking",
+          "status": "PASS",
+          "predicted_class": "vasc",
+          "confidence": 0.910649
+        },
+        {
+          "step": "In-App Notification Delivery",
+          "status": "PASS",
+          "notification_count": 3
+        }
+      ],
+      "passed": true
+    },
+    "journey_b_clinician": {
+      "steps": [
+        {
+          "step": "Clinician Registration",
+          "status": "PASS"
+        },
+        {
+          "step": "Unverified Clinician Triage Guard (403)",
+          "status": "PASS"
+        },
+        {
+          "step": "Admin Approval & Verification",
+          "status": "PASS"
+        },
+        {
+          "step": "Verified Clinician Triage Access (200)",
+          "status": "PASS"
+        },
+        {
+          "step": "Case Triage Claiming",
+          "status": "PASS"
+        },
+        {
+          "step": "Grad-CAM Explainability Review (image/jpeg)",
+          "status": "PASS"
+        },
+        {
+          "step": "Clinical Review & Diagnostic Authorization",
+          "status": "PASS"
+        },
+        {
+          "step": "Longitudinal Follow-up Reminder Scheduling",
+          "status": "PASS"
+        },
+        {
+          "step": "Clinical PDF Report Generation",
+          "status": "PASS",
+          "pdf_size_bytes": 20155
+        }
+      ],
+      "passed": true
+    },
+    "journey_c_role_security": {
+      "steps": [
+        {
+          "step": "Reject Public Registration for 'admin' (400)",
+          "status": "PASS"
+        },
+        {
+          "step": "Reject Public Registration for 'researcher' (400)",
+          "status": "PASS"
+        },
+        {
+          "step": "Reject Public Registration for 'ml_engineer' (400)",
+          "status": "PASS"
+        },
+        {
+          "step": "Reject Unsupported Role 'superuser' (400/422)",
+          "status": "PASS"
+        },
+        {
+          "step": "Verified Public Registration Restricted to Patient & Clinician",
+          "status": "PASS"
+        }
+      ],
+      "passed": true
+    },
+    "journey_e_rbac_enforcement": {
+      "steps": [
+        {
+          "step": "Patient Blocked from Case Assignment Claiming (403)",
+          "status": "PASS"
+        },
+        {
+          "step": "Patient Blocked from Submitting Clinical Reviews (403)",
+          "status": "PASS"
+        },
+        {
+          "step": "Patient Blocked from Admin Clinician Verification (403)",
+          "status": "PASS"
+        },
+        {
+          "step": "Patient Blocked from Admin Pending Clinicians (403)",
+          "status": "PASS"
+        },
+        {
+          "step": "Clinician Blocked from Admin Verification Endpoints (403)",
+          "status": "PASS"
+        },
+        {
+          "step": "Clinician Blocked from Admin Pending Clinicians List (403)",
+          "status": "PASS"
+        },
+        {
+          "step": "Non-Admins Blocked from Model Activation / Rollback (403)",
+          "status": "PASS"
+        },
+        {
+          "step": "Non-Admins Blocked from Training Lineage Governance (403)",
+          "status": "PASS"
+        },
+        {
+          "step": "Unauthenticated Access Rejection (401)",
+          "status": "PASS"
+        }
+      ],
+      "passed": true
+    },
+    "journey_f_edge_cases": {
+      "steps": [
+        {
+          "step": "Corrupt Upload Rejection & Case Retention (400)",
+          "status": "PASS"
+        },
+        {
+          "step": "Upload Retry Without Case Recreation (200)",
+          "status": "PASS"
+        },
+        {
+          "step": "Cross-Patient BOLA/IDOR Access Rejection (403)",
+          "status": "PASS"
+        },
+        {
+          "step": "Post-Review Metadata Freezing Enforcement (403)",
+          "status": "PASS"
+        }
+      ],
+      "passed": true
+    }
+  },
+  "summary": {
+    "total_journeys": 6,
+    "journeys_passed": 6,
+    "journeys_failed": 0,
+    "pass_rate_pct": 100.0,
+    "overall_status": "PASS"
+  }
+}

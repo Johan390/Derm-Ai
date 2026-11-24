@@ -1,0 +1,552 @@
+{
+  "active_version": "v1.0",
+  "activation_history": [
+    {
+      "version": "v1.0",
+      "activated_at": "2026-11-04T05:16:00Z",
+      "activated_by": "system_bootstrap",
+      "reason": "Milestone 1 baseline MobileNetV2 release"
+    },
+    {
+      "version": "v1.1",
+      "previous_version": "v1.0",
+      "activated_at": "2026-11-21T11:35:36.415931+00:00",
+      "activated_by_user_id": 188,
+      "reason": "Switching active architecture to EfficientNetB0"
+    },
+    {
+      "version": "v1.0",
+      "previous_version": "v1.1",
+      "activated_at": "2026-11-21T11:35:36.425713+00:00",
+      "activated_by_user_id": 189,
+      "reason": "Rollback to MobileNetV2 baseline"
+    },
+    {
+      "version": "v1.1",
+      "previous_version": "v1.0",
+      "activated_at": "2026-11-21T11:36:05.899970+00:00",
+      "activated_by_user_id": 192,
+      "reason": "Switching active architecture to EfficientNetB0"
+    },
+    {
+      "version": "v1.0",
+      "previous_version": "v1.1",
+      "activated_at": "2026-11-21T11:36:05.953706+00:00",
+      "activated_by_user_id": 193,
+      "reason": "Rollback to MobileNetV2 baseline"
+    },
+    {
+      "version": "v1.1",
+      "previous_version": "v1.0",
+      "activated_at": "2026-11-21T11:34:43.582288+00:00",
+      "activated_by_user_id": 204,
+      "reason": "Switching active architecture to EfficientNetB0"
+    },
+    {
+      "version": "v1.0",
+      "previous_version": "v1.1",
+      "activated_at": "2026-11-21T11:34:43.587757+00:00",
+      "activated_by_user_id": 205,
+      "reason": "Rollback to MobileNetV2 baseline"
+    },
+    {
+      "version": "v1.1",
+      "previous_version": "v1.0",
+      "activated_at": "2026-11-21T11:52:33.140441+00:00",
+      "activated_by_user_id": 249,
+      "reason": "Switching active architecture to EfficientNetB0"
+    },
+    {
+      "version": "v1.0",
+      "previous_version": "v1.1",
+      "activated_at": "2026-11-21T11:52:33.148701+00:00",
+      "activated_by_user_id": 250,
+      "reason": "Rollback to MobileNetV2 baseline"
+    },
+    {
+      "version": "v1.1",
+      "previous_version": "v1.0",
+      "activated_at": "2026-11-21T11:53:00.706942+00:00",
+      "activated_by_user_id": 255,
+      "reason": "Switching active architecture to EfficientNetB0"
+    },
+    {
+      "version": "v1.0",
+      "previous_version": "v1.1",
+      "activated_at": "2026-11-21T11:53:00.712768+00:00",
+      "activated_by_user_id": 256,
+      "reason": "Rollback to MobileNetV2 baseline"
+    },
+    {
+      "version": "v1.1",
+      "previous_version": "v1.0",
+      "activated_at": "2026-11-21T12:11:25.961590+00:00",
+      "activated_by_user_id": 286,
+      "reason": "Switching active architecture to EfficientNetB0"
+    },
+    {
+      "version": "v1.0",
+      "previous_version": "v1.1",
+      "activated_at": "2026-11-21T12:11:25.970430+00:00",
+      "activated_by_user_id": 287,
+      "reason": "Rollback to MobileNetV2 baseline"
+    },
+    {
+      "version": "v1.1",
+      "previous_version": "v1.0",
+      "activated_at": "2026-11-21T12:13:31.858724+00:00",
+      "activated_by_user_id": 300,
+      "reason": "Switching active architecture to EfficientNetB0"
+    },
+    {
+      "version": "v1.0",
+      "previous_version": "v1.1",
+      "activated_at": "2026-11-21T12:13:31.869044+00:00",
+      "activated_by_user_id": 301,
+      "reason": "Rollback to MobileNetV2 baseline"
+    },
+    {
+      "version": "v1.1",
+      "previous_version": "v1.0",
+      "activated_at": "2026-11-21T12:19:14.477309+00:00",
+      "activated_by_user_id": 309,
+      "reason": "Switching active architecture to EfficientNetB0"
+    },
+    {
+      "version": "v1.1",
+      "previous_version": "v1.1",
+      "activated_at": "2026-11-21T12:20:02.173012+00:00",
+      "activated_by_user_id": 332,
+      "reason": "Switching active architecture to EfficientNetB0"
+    },
+    {
+      "version": "v1.0",
+      "previous_version": "v1.1",
+      "activated_at": "2026-11-21T12:20:02.181241+00:00",
+      "activated_by_user_id": 333,
+      "reason": "Rollback to MobileNetV2 baseline"
+    },
+    {
+      "version": "v1.1",
+      "previous_version": "v1.0",
+      "activated_at": "2026-11-21T12:27:01.792337+00:00",
+      "activated_by_user_id": 339,
+      "reason": "Switching active architecture to EfficientNetB0"
+    },
+    {
+      "version": "v1.0",
+      "previous_version": "v1.1",
+      "activated_at": "2026-11-21T12:27:01.801089+00:00",
+      "activated_by_user_id": 340,
+      "reason": "Rollback to MobileNetV2 baseline"
+    },
+    {
+      "version": "v1.1",
+      "previous_version": "v1.0",
+      "activated_at": "2026-11-21T12:26:34.801088+00:00",
+      "activated_by_user_id": 348,
+      "reason": "Switching active architecture to EfficientNetB0"
+    },
+    {
+      "version": "v1.0",
+      "previous_version": "v1.1",
+      "activated_at": "2026-11-21T12:26:34.810513+00:00",
+      "activated_by_user_id": 349,
+      "reason": "Rollback to MobileNetV2 baseline"
+    },
+    {
+      "version": "v1.1",
+      "previous_version": "v1.0",
+      "activated_at": "2026-11-21T12:28:58.705116+00:00",
+      "activated_by_user_id": 374,
+      "reason": "E2E active switch to EfficientNetB0"
+    },
+    {
+      "version": "v1.0",
+      "previous_version": "v1.1",
+      "activated_at": "2026-11-21T12:28:58.710824+00:00",
+      "activated_by_user_id": 374,
+      "reason": "E2E rollback to MobileNetV2"
+    },
+    {
+      "version": "v1.1",
+      "previous_version": "v1.0",
+      "activated_at": "2026-11-21T12:31:14.815517+00:00",
+      "activated_by_user_id": 380,
+      "reason": "E2E active switch to EfficientNetB0"
+    },
+    {
+      "version": "v1.0",
+      "previous_version": "v1.1",
+      "activated_at": "2026-11-21T12:31:14.824829+00:00",
+      "activated_by_user_id": 380,
+      "reason": "E2E rollback to MobileNetV2"
+    },
+    {
+      "version": "v1.1",
+      "previous_version": "v1.0",
+      "activated_at": "2026-11-21T12:33:03.911518+00:00",
+      "activated_by_user_id": 386,
+      "reason": "E2E active switch to EfficientNetB0"
+    },
+    {
+      "version": "v1.0",
+      "previous_version": "v1.1",
+      "activated_at": "2026-11-21T12:33:03.918494+00:00",
+      "activated_by_user_id": 386,
+      "reason": "E2E rollback to MobileNetV2"
+    },
+    {
+      "version": "v1.1",
+      "previous_version": "v1.0",
+      "activated_at": "2026-11-21T18:35:17.984281+00:00",
+      "activated_by_user_id": 392,
+      "reason": "E2E active switch to EfficientNetB0"
+    },
+    {
+      "version": "v1.0",
+      "previous_version": "v1.1",
+      "activated_at": "2026-11-21T18:35:17.992031+00:00",
+      "activated_by_user_id": 392,
+      "reason": "E2E rollback to MobileNetV2"
+    },
+    {
+      "version": "v1.1",
+      "previous_version": "v1.0",
+      "activated_at": "2026-11-21T19:30:58.503885+00:00",
+      "activated_by_user_id": 396,
+      "reason": "Switching active architecture to EfficientNetB0"
+    },
+    {
+      "version": "v1.0",
+      "previous_version": "v1.1",
+      "activated_at": "2026-11-21T19:30:58.516571+00:00",
+      "activated_by_user_id": 397,
+      "reason": "Rollback to MobileNetV2 baseline"
+    },
+    {
+      "version": "v1.1",
+      "previous_version": "v1.0",
+      "activated_at": "2026-11-21T19:35:34.920615+00:00",
+      "activated_by_user_id": 405,
+      "reason": "Switching active architecture to EfficientNetB0"
+    },
+    {
+      "version": "v1.0",
+      "previous_version": "v1.1",
+      "activated_at": "2026-11-21T19:35:34.930865+00:00",
+      "activated_by_user_id": 406,
+      "reason": "Rollback to MobileNetV2 baseline"
+    },
+    {
+      "version": "v1.1",
+      "previous_version": "v1.0",
+      "activated_at": "2026-11-21T19:42:40.785631+00:00",
+      "activated_by_user_id": 421,
+      "reason": "Switching active architecture to EfficientNetB0"
+    },
+    {
+      "version": "v1.0",
+      "previous_version": "v1.1",
+      "activated_at": "2026-11-21T19:42:40.796713+00:00",
+      "activated_by_user_id": 422,
+      "reason": "Rollback to MobileNetV2 baseline"
+    },
+    {
+      "version": "v1.1",
+      "previous_version": "v1.0",
+      "activated_at": "2026-11-21T19:39:40.204251+00:00",
+      "activated_by_user_id": 428,
+      "reason": "E2E active switch to EfficientNetB0"
+    },
+    {
+      "version": "v1.0",
+      "previous_version": "v1.1",
+      "activated_at": "2026-11-21T19:39:40.215652+00:00",
+      "activated_by_user_id": 428,
+      "reason": "E2E rollback to MobileNetV2"
+    },
+    {
+      "version": "v1.1",
+      "previous_version": "v1.0",
+      "activated_at": "2026-11-21T20:15:20.027756+00:00",
+      "activated_by_user_id": 462,
+      "reason": "Switching active architecture to EfficientNetB0"
+    },
+    {
+      "version": "v1.0",
+      "previous_version": "v1.1",
+      "activated_at": "2026-11-21T20:15:20.036092+00:00",
+      "activated_by_user_id": 463,
+      "reason": "Rollback to MobileNetV2 baseline"
+    },
+    {
+      "version": "v1.1",
+      "previous_version": "v1.0",
+      "activated_at": "2026-11-21T20:33:29.814236+00:00",
+      "activated_by_user_id": 468,
+      "reason": "Switching active architecture to EfficientNetB0"
+    },
+    {
+      "version": "v1.0",
+      "previous_version": "v1.1",
+      "activated_at": "2026-11-21T20:33:29.822395+00:00",
+      "activated_by_user_id": 469,
+      "reason": "Rollback to MobileNetV2 baseline"
+    },
+    {
+      "version": "v1.1",
+      "previous_version": "v1.0",
+      "activated_at": "2026-11-22T03:23:05.684275+00:00",
+      "activated_by_user_id": 477,
+      "reason": "Switching active architecture to EfficientNetB0"
+    },
+    {
+      "version": "v1.0",
+      "previous_version": "v1.1",
+      "activated_at": "2026-11-22T03:23:05.690388+00:00",
+      "activated_by_user_id": 478,
+      "reason": "Rollback to MobileNetV2 baseline"
+    },
+    {
+      "version": "v1.1",
+      "previous_version": "v1.0",
+      "activated_at": "2026-11-22T03:30:07.705214+00:00",
+      "activated_by_user_id": 505,
+      "reason": "Switching active architecture to EfficientNetB0"
+    },
+    {
+      "version": "v1.0",
+      "previous_version": "v1.1",
+      "activated_at": "2026-11-22T03:30:07.712060+00:00",
+      "activated_by_user_id": 506,
+      "reason": "Rollback to MobileNetV2 baseline"
+    },
+    {
+      "version": "v1.1",
+      "previous_version": "v1.0",
+      "activated_at": "2026-11-22T03:59:53.758912+00:00",
+      "activated_by_user_id": 543,
+      "reason": "Switching active architecture to EfficientNetB0"
+    },
+    {
+      "version": "v1.0",
+      "previous_version": "v1.1",
+      "activated_at": "2026-11-22T03:59:53.764864+00:00",
+      "activated_by_user_id": 544,
+      "reason": "Rollback to MobileNetV2 baseline"
+    },
+    {
+      "version": "v1.1",
+      "previous_version": "v1.0",
+      "activated_at": "2026-11-22T03:57:40.084081+00:00",
+      "activated_by_user_id": 585,
+      "reason": "Switching active architecture to EfficientNetB0"
+    },
+    {
+      "version": "v1.0",
+      "previous_version": "v1.1",
+      "activated_at": "2026-11-22T03:57:40.090520+00:00",
+      "activated_by_user_id": 586,
+      "reason": "Rollback to MobileNetV2 baseline"
+    },
+    {
+      "version": "v1.1",
+      "previous_version": "v1.0",
+      "activated_at": "2026-11-22T03:59:14.928821+00:00",
+      "activated_by_user_id": 620,
+      "reason": "Switching active architecture to EfficientNetB0"
+    },
+    {
+      "version": "v1.0",
+      "previous_version": "v1.1",
+      "activated_at": "2026-11-22T03:59:14.935225+00:00",
+      "activated_by_user_id": 621,
+      "reason": "Rollback to MobileNetV2 baseline"
+    },
+    {
+      "version": "v1.1",
+      "previous_version": "v1.0",
+      "activated_at": "2026-11-22T04:00:11.430910+00:00",
+      "activated_by_user_id": 648,
+      "reason": "Switching active architecture to EfficientNetB0"
+    },
+    {
+      "version": "v1.0",
+      "previous_version": "v1.1",
+      "activated_at": "2026-11-22T04:00:11.437052+00:00",
+      "activated_by_user_id": 649,
+      "reason": "Rollback to MobileNetV2 baseline"
+    },
+    {
+      "version": "v1.1",
+      "previous_version": "v1.0",
+      "activated_at": "2026-11-22T04:01:27.049364+00:00",
+      "activated_by_user_id": 664,
+      "reason": "Switching active architecture to EfficientNetB0"
+    },
+    {
+      "version": "v1.0",
+      "previous_version": "v1.1",
+      "activated_at": "2026-11-22T04:01:27.056787+00:00",
+      "activated_by_user_id": 665,
+      "reason": "Rollback to MobileNetV2 baseline"
+    },
+    {
+      "version": "v1.1",
+      "previous_version": "v1.0",
+      "activated_at": "2026-11-22T04:28:53.215542+00:00",
+      "activated_by_user_id": 671,
+      "reason": "Switching active architecture to EfficientNetB0"
+    },
+    {
+      "version": "v1.0",
+      "previous_version": "v1.1",
+      "activated_at": "2026-11-22T04:28:53.222671+00:00",
+      "activated_by_user_id": 672,
+      "reason": "Rollback to MobileNetV2 baseline"
+    }
+  ],
+  "models": {
+    "v1.0": {
+      "version": "v1.0",
+      "model_name": "DermAI_MobileNetV2",
+      "architecture": "MobileNetV2",
+      "checkpoint_file": "mobilenetv2_skin_lesion_best.keras",
+      "dataset_reference": "HAM10000 v1.0.0 (10,015 images)",
+      "input_dimensions": [
+        224,
+        224,
+        3
+      ],
+      "preprocessing": "aspect_center_crop + [-1, 1] normalization",
+      "num_classes": 7,
+      "class_labels": [
+        "akiec",
+        "bcc",
+        "bkl",
+        "df",
+        "mel",
+        "nv",
+        "vasc"
+      ],
+      "created_at": "2026-11-04T05:16:00Z",
+      "is_active": true,
+      "evaluation_summary": {
+        "accuracy": 0.7022,
+        "test_dataset_size": 1501,
+        "balanced_accuracy": 0.6085,
+        "macro_f1": 0.4989,
+        "val_accuracy_epoch13": 0.7129,
+        "test_subset_265_accuracy": 0.5887,
+        "inference_latency_ms": 189.75,
+        "evaluation_source": "ml_models/evaluation_results/test_evaluation_metrics.json (2026-11-04)"
+      }
+    },
+    "v1.1": {
+      "version": "v1.1",
+      "model_name": "DermAI_EfficientNetB0",
+      "architecture": "EfficientNetB0",
+      "checkpoint_file": "efficientnetb0_skin_lesion.keras",
+      "dataset_reference": "HAM10000 v1.0.0 (10,015 images)",
+      "input_dimensions": [
+        224,
+        224,
+        3
+      ],
+      "preprocessing": "aspect_center_crop + native RGB scaling [0, 255]",
+      "num_classes": 7,
+      "class_labels": [
+        "akiec",
+        "bcc",
+        "bkl",
+        "df",
+        "mel",
+        "nv",
+        "vasc"
+      ],
+      "created_at": "2026-11-17T13:59:00Z",
+      "is_active": false,
+      "evaluation_summary": {
+        "accuracy": 0.5698,
+        "test_dataset_size": 265,
+        "balanced_accuracy": 0.5882,
+        "macro_f1": 0.577,
+        "val_accuracy_config_a": 0.633,
+        "inference_latency_ms": 343.57,
+        "evaluation_source": "ml_models/evaluation_results/model_comparison.json (2026-11-17)"
+      }
+    },
+    "v2.0": {
+      "version": "v2.0",
+      "model_name": "DermAI_VisionTransformer",
+      "architecture": "Vision Transformer (ViT-16)",
+      "checkpoint_file": "vit_skin_lesion_exp2_best.keras",
+      "dataset_reference": "HAM10000 v1.0.0 (10,015 images)",
+      "input_dimensions": [
+        224,
+        224,
+        3
+      ],
+      "preprocessing": "aspect_center_crop + 16x16 patch extraction",
+      "num_classes": 7,
+      "class_labels": [
+        "akiec",
+        "bcc",
+        "bkl",
+        "df",
+        "mel",
+        "nv",
+        "vasc"
+      ],
+      "created_at": "2026-11-21T07:19:00Z",
+      "is_active": false,
+      "evaluation_summary": {
+        "balanced_test_265_accuracy": 0.6075,
+        "balanced_test_265_balanced_acc": 0.6123,
+        "balanced_test_265_macro_f1": 0.6017,
+        "full_test_1501_accuracy": 0.7435,
+        "full_test_1501_balanced_acc": 0.6281,
+        "full_test_1501_macro_f1": 0.5817,
+        "full_test_1501_roc_auc_macro": 0.9336,
+        "cohort_benchmark_status": "evaluated_on_test_cohort",
+        "inference_latency_ms": 4.96,
+        "evaluation_source": "ml_models/evaluation_results/vit_cohort_evaluation.json (2026-11-21)"
+      }
+    },
+    "v3.0": {
+      "version": "v3.0",
+      "model_name": "DermAI_SoftVoting_Ensemble",
+      "architecture": "Ensemble (MobileNetV2 + EfficientNetB0)",
+      "checkpoint_file": "mobilenetv2_skin_lesion_best.keras + efficientnetb0_skin_lesion.keras",
+      "dataset_reference": "HAM10000 v1.0.0 (10,015 images)",
+      "input_dimensions": [
+        224,
+        224,
+        3
+      ],
+      "preprocessing": "multi-branch dual pipeline",
+      "num_classes": 7,
+      "class_labels": [
+        "akiec",
+        "bcc",
+        "bkl",
+        "df",
+        "mel",
+        "nv",
+        "vasc"
+      ],
+      "created_at": "2026-11-17T14:15:00Z",
+      "is_active": false,
+      "evaluation_summary": {
+        "accuracy": 0.6302,
+        "test_dataset_size": 265,
+        "balanced_accuracy": 0.6522,
+        "macro_f1": 0.644,
+        "ensemble_gain_over_baseline": "+4.15%",
+        "inference_latency_ms": 630.67,
+        "evaluation_source": "ml_models/evaluation_results/model_comparison.json (2026-11-17)"
+      }
+    }
+  }
+}

@@ -1,0 +1,403 @@
+/* ==========================================================================
+   DermAI Application Layout & Clinical Workstation Styles
+   Brand Primary: #8BDFDD | Contrast Text: #173B45 | Canvas: #F7FAFA
+   ========================================================================== */
+
+/* App Wrapper & Structure */
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-page);
+  color: var(--text-main);
+}
+
+.main-content {
+  flex: 1;
+  padding: 24px 0 44px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 16px 0 32px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Header & Navigation System
+   -------------------------------------------------------------------------- */
+.navbar-header {
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 1px 3px rgba(23, 59, 69, 0.04);
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height, 64px);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+}
+
+.navbar-brand-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background: var(--primary-accent);
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-xs);
+}
+
+.navbar-brand-text {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.navbar-brand-subtitle {
+  font-size: 0.6875rem;
+  color: var(--text-secondary);
+  margin-top: -2px;
+  font-weight: 500;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Navigation Links (replacing default button styling) */
+.navbar-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  font-family: var(--font-sans);
+  color: var(--text-secondary);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+  line-height: 1.25;
+  text-decoration: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.navbar-item:hover {
+  background: var(--bg-surface-subtle);
+  color: var(--text-main);
+  border-color: var(--border-color);
+}
+
+.navbar-item-active {
+  background: var(--primary-light) !important;
+  color: var(--text-main) !important;
+  border-color: var(--primary-light-border) !important;
+  font-weight: 600 !important;
+}
+
+.navbar-item-active:hover {
+  background: #DCF4F2 !important;
+  border-color: var(--primary-hover) !important;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Responsive Navbar Controls */
+.mobile-toggle {
+  display: none;
+}
+
+@media (max-width: 1080px) {
+  .desktop-nav {
+    display: none !important;
+  }
+
+  .desktop-auth {
+    display: none !important;
+  }
+
+  .mobile-toggle {
+    display: inline-flex !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Notification Popover
+   -------------------------------------------------------------------------- */
+.notification-popover {
+  position: absolute;
+  right: 0;
+  top: 44px;
+  width: 340px;
+  max-width: 90vw;
+  background: #FFFFFF;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-modal);
+  border: 1px solid var(--border-color);
+  z-index: 1000;
+  max-height: 440px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.notification-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--bg-surface-subtle);
+}
+
+/* --------------------------------------------------------------------------
+   Off-Canvas Mobile Navigation Drawer
+   -------------------------------------------------------------------------- */
+.mobile-nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(23, 59, 69, 0.4);
+  backdrop-filter: blur(2px);
+  z-index: 998;
+}
+
+.mobile-nav-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 290px;
+  max-width: 85vw;
+  background: #FFFFFF;
+  border-left: 1px solid var(--border-color);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-5);
+  box-shadow: var(--shadow-modal);
+  animation: slideInRight 0.2s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   PHASE 2: DASHBOARD METRIC STRIP & CARDS
+   Desktop: 4 in a row | Tablets: 2 columns | Mobile: 1 column
+   -------------------------------------------------------------------------- */
+.metric-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  align-items: stretch;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .metric-strip {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+}
+
+@media (max-width: 540px) {
+  .metric-strip {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+.metric-tile {
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 108px;
+  box-shadow: var(--shadow-xs);
+  transition: all 0.18s ease;
+  box-sizing: border-box;
+}
+
+.metric-tile:hover {
+  border-color: #CADCD8;
+  box-shadow: var(--shadow-sm);
+}
+
+.metric-tile-interactive {
+  cursor: pointer;
+}
+
+.metric-tile-interactive:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary-hover);
+  box-shadow: var(--shadow-md);
+}
+
+/* Dashboard Columns Grid (Worklist Left, Imagery Right) */
+.dashboard-columns {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .dashboard-columns {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Clinical Workstation 2-Column Split (CaseDetail)
+   -------------------------------------------------------------------------- */
+.workstation-split {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+@media (max-width: 1180px) {
+  .workstation-split {
+    grid-template-columns: 360px 1fr;
+    gap: var(--space-4);
+  }
+}
+
+@media (max-width: 1024px) {
+  .workstation-split {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Intake Grid (CreateCaseAndUpload)
+   -------------------------------------------------------------------------- */
+.intake-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .intake-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   XAI Multi-Stage Grid (PredictionResults)
+   -------------------------------------------------------------------------- */
+.xai-stage-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .xai-stage-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Landing Page Hero Grid
+   -------------------------------------------------------------------------- */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+}
+
+@media (max-width: 960px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Toolbar Rows (CaseList, Worklists)
+   -------------------------------------------------------------------------- */
+.toolbar-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  padding: 14px 18px;
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 1px 2px rgba(23, 59, 69, 0.03);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Helpers
+   -------------------------------------------------------------------------- */
+@media (max-width: 640px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+.app-footer {
+  border-top: 1px solid var(--border-color);
+  padding: 20px 0;
+  background: #FFFFFF;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-top: auto;
+}

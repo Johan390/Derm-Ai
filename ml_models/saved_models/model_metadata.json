@@ -1,0 +1,76 @@
+{
+  "model_name": "DermAI_MobileNetV2",
+  "created_at": "2026-11-03T21:45:00Z",
+  "input_shape": [
+    224,
+    224,
+    3
+  ],
+  "num_classes": 7,
+  "class_labels": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "label_to_idx": {
+    "akiec": 0,
+    "bcc": 1,
+    "bkl": 2,
+    "df": 3,
+    "mel": 4,
+    "nv": 5,
+    "vasc": 6
+  },
+  "idx_to_label": {
+    "0": "akiec",
+    "1": "bcc",
+    "2": "bkl",
+    "3": "df",
+    "4": "mel",
+    "5": "nv",
+    "6": "vasc"
+  },
+  "class_names": {
+    "akiec": "Actinic Keratosis",
+    "bcc": "Basal Cell Carcinoma",
+    "bkl": "Benign Keratosis",
+    "df": "Dermatofibroma",
+    "mel": "Melanoma",
+    "nv": "Melanocytic Nevus",
+    "vasc": "Vascular Lesion"
+  },
+  "risk_levels": {
+    "mel": "High Risk",
+    "bcc": "High Risk",
+    "akiec": "Moderate Risk",
+    "nv": "Low Risk",
+    "bkl": "Low Risk",
+    "df": "Low Risk",
+    "vasc": "Low Risk"
+  },
+  "class_weights": {
+    "0": 4.3559,
+    "1": 2.7752,
+    "2": 1.3011,
+    "3": 12.5232,
+    "4": 1.2877,
+    "5": 0.2134,
+    "6": 10.1198
+  },
+  "best_metrics": {
+    "best_epoch": 13,
+    "val_loss": 0.8304,
+    "val_accuracy": 0.7129,
+    "phase": "Phase 1"
+  },
+  "hardware": {
+    "device_type": "CPU",
+    "device_name": "/physical_device:CPU:0",
+    "processor": "AMD Ryzen 7 250 (8 cores, 16 threads)",
+    "ram": "24 GB"
+  }
+}
